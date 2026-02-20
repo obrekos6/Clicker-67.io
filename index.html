@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>67 КЛИКЕР · ПЕРЕКЛЮЧАТЕЛЬ ВНИЗУ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container" id="gameContainer">
+        <div class="score-table">
+            <div class="score-row">
+                <div class="score-cell">💰 БАЛАНС</div>
+                <div class="score-cell" id="scoreValue">0</div>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <span>💪 ЗА КЛИК: <span id="clickPower">67</span></span>
+            <span>⏱️ АВТО/СЕК: <span id="autoPower">0</span></span>
+            <span>⚡ СКОРОСТЬ: <span id="speedLevel">1.0x</span></span>
+        </div>
+
+        <div class="click-area" id="clickArea">
+            <div class="big-hit">👆 ЖМИ В ЦЕНТР</div>
+        </div>
+
+        <div class="floating-container" id="floatingContainer"></div>
+
+        <div class="upgrade-panel">
+            <div class="upgrade-card">
+                <h3>🔥 КЛИК</h3>
+                <div class="upgrade-info" id="clickUpgradeInfo">ур.1 (+67)</div>
+                <button class="upgrade-btn" id="clickUpgradeBtn">цена: 670</button>
+            </div>
+
+            <div class="upgrade-card">
+                <h3>⏰ АВТО</h3>
+                <div class="upgrade-info" id="autoUpgradeInfo">ур.0 (+0/сек)</div>
+                <button class="upgrade-btn" id="autoUpgradeBtn">цена: 6700</button>
+            </div>
+
+            <div class="upgrade-card">
+                <h3>⚡ УСКОРЕНИЕ</h3>
+                <div class="upgrade-info" id="speedUpgradeInfo">ур.1 (1.0x)</div>
+                <button class="upgrade-btn" id="speedUpgradeBtn">цена: 67000</button>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-btn" id="prestigeBtn">✨ ПЕРЕРОДИТЬСЯ</button>
+        </div>
+
+        <button id="resetBtn">⟲ ОБНУЛИТЬ ВСЁ</button>
+
+        <!-- ПЕРЕКЛЮЧАТЕЛЬ В САМОМ НИЗУ - ВИДЕН СРАЗУ БЕЗ ПРОКРУТКИ -->
+        <div class="mode-switch" id="modeSwitch">
+            <span class="mode-btn" id="modeHands">🫴 руки</span>
+            <span class="mode-btn" id="modeFeet">🦶 ноги</span>
+        </div>
+    </div>
+
+    <div class="pin-modal hidden" id="pinModal">
+        <div class="pin-content">
+            <h3>🔐 ВВЕДИТЕ ПИН-КОД</h3>
+            <input type="text" class="pin-input" id="pinInput" maxlength="2" inputmode="numeric">
+            <div class="pin-buttons">
+                <button id="pinSubmit">OK</button>
+                <button id="pinCancel">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
